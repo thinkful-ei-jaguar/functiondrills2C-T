@@ -90,6 +90,9 @@ console.log(daysInMonth("Dog"));
 
 function rockPaperScissors (num) {
     const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (num !== 1 && num !== 2 && num !== 3) {
+        throw new Error("Must enter 1, 2, or 3");
+    }
     if (randomNo > num) {
         return 'The computer wins!';
     }
@@ -98,9 +101,6 @@ function rockPaperScissors (num) {
     }
     if (num === randomNo) {
         return 'tie';
-    }
-    if (num !== 1 && num !== 2 && num !== 3) {
-        throw new Error("Must enter 1, 2, or 3");
     }
 }
 
