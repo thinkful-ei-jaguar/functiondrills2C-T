@@ -49,3 +49,41 @@ console.log(decode('bells'));
 console.log(decode('brown'));
 console.log(decode('croon'));
 console.log(decode('droop'));
+
+function daysInMonth(month, leapYear = false) {
+    switch(month) {
+        case "September":
+        case "April":
+        case "June":
+        case "November":
+            console.log(`${month} has 30 days.`);
+        break;
+
+        case "January":
+        case "July":
+        case "August":
+        case "October":
+        case "March":
+        case "December":
+            console.log(`${month} has 31 days.`);
+        break;
+
+        case "February":
+            if (leapYear === true) {
+              console.log(`${month} has 29 days.`);
+            }
+            else {
+              console.log(`${month} has 28 days.`);
+            }
+        break; 
+    
+    default: 
+      console.log("Must provide a valid month"); 
+    }
+}
+
+console.log(daysInMonth("September"));
+console.log(daysInMonth("August"));
+console.log(daysInMonth("February", true)); 
+console.log(daysInMonth("February", false));
+console.log(daysInMonth("Dog"));
