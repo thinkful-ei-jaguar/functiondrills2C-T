@@ -87,3 +87,24 @@ console.log(daysInMonth("August"));
 console.log(daysInMonth("February", true)); 
 console.log(daysInMonth("February", false));
 console.log(daysInMonth("Dog"));
+
+function rockPaperScissors (num) {
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (randomNo > num) {
+        return 'The computer wins!';
+    }
+    if (randomNo < num) {
+        return 'Yay, you win!';
+    }
+    if (num === randomNo) {
+        return 'tie';
+    }
+    if (num !== 1 && num !== 2 && num !== 3) {
+        throw new Error("Must enter 1, 2, or 3");
+    }
+}
+
+console.log(rockPaperScissors(1));
+console.log(rockPaperScissors(3));
+console.log(rockPaperScissors(2));
+console.log(rockPaperScissors(23));
